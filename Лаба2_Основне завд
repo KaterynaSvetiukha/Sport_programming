@@ -1,0 +1,42 @@
+#include <stdio.h>;
+
+int main() {
+    // Завдання 1
+    int a, b;
+    printf("Enter value of number a and b\n");
+    scanf_s("%d%d", &a, &b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    printf("a = %d, b = %d", a, b);
+
+    //Завдання 2
+    int q;
+    float price, total;
+    printf("\nEnter the quantity and price for the one product\n");
+    scanf_s("%d%f", &q, &price);
+    total = q * price;
+    printf("Total price of the shoping = %f", total);
+
+    //Завдання 3
+    int num;
+    printf("\nEnter the enteger number\n");
+    scanf_s("%d", &num);
+    int end = num % 10;
+    printf("\nEnd number = %d", end);
+
+    //Завдання 4
+    int km = 120 + 80;
+    int t = 2 + 1;
+    float speed = km / t;
+    printf("\nAverage speed = %f", speed);
+
+    //Завдання 5
+    int three_n;
+    printf("\nEnter three-digit number\n");
+    scanf_s("%d", &three_n);
+    int reversed = ((three_n % 10) * 100) + ((three_n / 10) % 10) * 10 + (three_n / 100);
+    printf("Reversed number: %d", reversed);
+
+    return 0;
+}
