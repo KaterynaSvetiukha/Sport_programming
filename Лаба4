@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+    //Task 1
+    double m;
+    printf("Price without discount: 450$\n");
+    printf("Price wit discount: %.1f$\n", (450 - (450 * 15 / 100.0)));
+
+    //Task 2
+    printf("Enter the birth year\n");
+    int year;
+    scanf_s("%d", &year);
+
+    if (year <= 2025) {
+        printf("The person is %d years old", (2025 - year));
+    }
+    else {
+        printf("Uncorrect year");
+    }
+
+    //Task 3
+    double x1, y1, x2, y2;
+
+    printf("Enter coordinates of first point (x1 y1): ");
+    scanf_s("%lf %lf", &x1, &y1);
+
+    printf("Enter coordinates of second point (x2 y2): ");
+    scanf_s("%lf %lf", &x2, &y2);
+
+    double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    printf("The Euclidean distance between the points is: %.2lf\n", distance);
+
+    //Task 4
+    double price, discount;
+    printf("\nEnter the price of the product: ");
+    scanf_s("%lf", &price);
+    printf("Enter the discount percentage: ");
+    scanf_s("%lf", &discount);
+
+    double final_price = price - (price * discount / 100.0);
+    printf("\nThe final price after discount is: %.2lf\n", final_price);
+
+
+    //Task 5
+    printf("\nEnter three digit number\n");
+    int num;
+    scanf_s("%d", &num);
+    int sum = (num / 100) + ((num / 10) % 10) + (num % 10);
+    printf("Summa of the tree digit number = %d", sum);
+
+    //CREATED TASK
+    //Test
+    int x = 5;
+    printf("%d\n", x++ * 2);
+
+    //Created task with explaining
+    char uppercase, lowercase;
+
+    printf("Enter an uppercase letter: ");
+    scanf_s(" %c", &uppercase);  // Пробіл перед %c запобігає зчитуванню попереднього символу
+
+    lowercase = uppercase + 32;  // Додаємо 32, щоб отримати малу літеру
+
+    printf_s("Lowercase letter: %c\n", lowercase);
+
+    return 0;
+}
