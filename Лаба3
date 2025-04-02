@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+    //Task 1
+    double m;
+    printf("Eenter length in metres\n");
+    scanf_s("%lf", &m);
+    printf("Length in santimetres: %.2lf sm\n", (m * 100));
+    printf("Length in milimetres: %.2lf mm", (m * 1000));
+
+    //Task 2
+    printf("\nEnter R of the circle\n");
+    double r;
+    float M_PI = 3.14;
+    scanf_s("%lf", &r);
+    printf("Area of the circle: %.2lf", (M_PI * pow(r, 2)));
+
+    //Task 3
+    printf("\nEnter quantity of seconds: \n");
+    int s;
+    scanf_s("%d", &s);
+    printf("%d seconds in minutes: %.3f, in hours: %.3f", s, (s / 60.0), (s / 3600.0));
+
+    //Task 4
+    int n;
+    printf("\nEnter the number\n");
+    scanf_s("%d", &n);
+    printf("%s\n", (n % 2 == 0) ? "The number is even" : "The number is odd");
+
+    //Task 5
+    printf("\nEnter a letter in lower case\n");
+    while (getchar() != '\n'); 
+    char l;
+    scanf_s(" %c", &l);
+    printf("Letter in upper case: %c", (char)(l - 32));
+
+    //CREATED TASK
+    //Test
+    int x = 5;
+    printf("\n%d %d %d\n", x, x++, ++x);
+
+    //Created task
+    int num;
+    char str[100];
+
+    printf("Enter a number: ");
+    scanf_s("%d", &num);
+
+    while (getchar() != '\n');
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    printf("You entered: %d and %s", num, str);
+
+    return 0;
+}
